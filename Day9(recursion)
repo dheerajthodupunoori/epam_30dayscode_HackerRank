@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution
+{
+static int factorial(int n1)
+    {
+    if(n1==0)
+            {
+            return 1;
+        }
+    else
+        {
+        return(n1*factorial(n1-1));
+    }
+}
+    public static void main(String[] args) 
+    {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        int fact=1;
+        fact=factorial(n);
+        System.out.println(fact);
+    }
+}
