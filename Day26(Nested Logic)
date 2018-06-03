@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input = new Scanner(System.in);
+        int date_actual = input.nextInt();
+        int month_actual = input.nextInt();
+        int year_actual = input.nextInt();
+        int date_expected = input.nextInt();
+        int month_expected = input.nextInt();
+        int year_expected = input.nextInt();
+        if(year_expected < year_actual )
+        {
+            System.out.println(10000);
+        }
+        else if(year_expected == year_actual && month_expected < month_actual)
+        {
+        System.out.println(500*(month_actual-month_expected));
+        }
+        else if(month_expected == month_actual && date_expected != date_actual)
+        {
+        System.out.println(15*(date_actual-date_expected));
+        }
+        else
+        {
+            System.out.println(0);
+        }
+         }
+    }
